@@ -1,0 +1,25 @@
+{
+  "name": "backend_labs",
+  "version": "1.0.0",
+  "description": "for backend labs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxlwrl/backend_labs.git"
+  },
+  "author": "Vadym Kazak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sxlwrl/backend_labs/issues"
+  },
+  "homepage": "https://github.com/sxlwrl/backend_labs#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/node": "^20.8.2",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
