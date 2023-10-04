@@ -4,7 +4,7 @@
   "description": "for backend labs",
   "main": "index.js",
   "scripts": {
-    "start_lab1": "nodemon dist/lab1/lab1_app.js"
+    "start_lab1": "tsc & nodemon dist/lab1/lab1_app.js"
   },
   "repository": {
     "type": "git",
