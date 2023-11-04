@@ -1,7 +1,7 @@
 import App from './app';
-import 'dotenv/config';
-import userRoutes from "./routes/User.routes";
+import userRoutes from './routes/User.routes';
+import categoryRoutes from './routes/Category.routes';
 
-const app = new App([userRoutes]);
+const app = new App([new userRoutes(), new categoryRoutes()]);
 
 app.listen();
