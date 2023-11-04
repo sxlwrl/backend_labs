@@ -1,10 +1,12 @@
 import {Router} from 'express';
 
-import {UserRepository} from "../repositories/UserRepository";
-import {UserController} from "../controllers/User/User.controller";
+import {UserRepository} from "../repositories/User/UserRepository";
+import {UserController} from "../controllers/User.controller";
 import {UserService} from "../services/User.service";
 
-class UserRoutes {
+import IRoutes from './routes-interfaces/IRoutes';
+
+class UserRoutes implements IRoutes {
     public router: Router = Router();
     private userService: UserService = new UserService(new UserRepository())
     private userController: UserController = new UserController(this.userService);
@@ -14,7 +16,10 @@ class UserRoutes {
     };
 
     initializeRoutes() {
+        this.router.get('/user/:user_id', this.userController.getUserById);
+        this.router.delete('/user/:user_id', this.userController.deleteUser);
         this.router.post('/user', this.userController.createUser);
+        this.router.get('/users', this.userController.getUsers);
     };
 }
 
