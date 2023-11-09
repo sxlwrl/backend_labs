@@ -1,19 +1,11 @@
-import { IUserRepository } from '../repositories/User/IUserRepository';
+import { IUserRepository } from '../repositories/interfaces/IUser.repository';
 import { CreateUserDto } from '../dto/CreateUser.dto';
+import { Service } from './Service';
+import { User } from '../entities/User';
 
-export class UserService {
-    constructor(private readonly _userRepository: IUserRepository) {}
-
-    public getUserById(id: string) {
-        return this._userRepository.getUserById(id);
-    };
-
-    public deleteUser(id: string) {
-        return this._userRepository.deleteUser(id);
-    };
-
-    public createUser(data: CreateUserDto) {
-        return this._userRepository.createUser(data);
+export class UserService extends Service<User, CreateUserDto>{
+    constructor(private readonly _userRepository: IUserRepository) {
+        super(_userRepository);
     };
 
     public getUsers() {
