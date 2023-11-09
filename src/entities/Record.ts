@@ -1,7 +1,7 @@
 export interface Record {
-    id: number;
-    userId: number;
-    categoryId: number;
+    id: string;
+    userId: string;
+    categoryId: string;
     date: Date;
     costs: number;
 }
