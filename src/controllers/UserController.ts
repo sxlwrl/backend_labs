@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express';
-import { UserService } from '../services/User.service';
+import { UserService } from '../services/UserService';
 import checkObjectType from '../utils/checkObjectType';
 import { CreateUserDto } from '../dto/CreateUser.dto';
 
@@ -8,7 +8,7 @@ export class UserController {
 
     public getUserById: RequestHandler = (req, res) => {
         const userId = req.params.user_id;
-        const user = this._userService.getUserById(userId);
+        const user = this._userService.getById(userId);
 
         if (!user) {
             return res.status(404).send('User not found');
@@ -19,14 +19,13 @@ export class UserController {
 
     public deleteUser: RequestHandler = (req, res) => {
         const userId = req.params.user_id;
-
-        const user = this._userService.getUserById(userId);
+        const user = this._userService.getById(userId);
 
         if (!user) {
             return res.status(404).send('User not found');
         }
 
-        this._userService.deleteUser(userId);
+        this._userService.delete(userId);
 
         return res
             .status(200)
@@ -40,7 +39,7 @@ export class UserController {
             return res.status(400).send('Invalid username');
         }
 
-        const newUser = this._userService.createUser(data);
+        const newUser = this._userService.create(data);
 
         return res
             .status(201)
