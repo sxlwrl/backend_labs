@@ -1,4 +1,4 @@
-import { IUserRepository } from '../repositories/interfaces/IUser.repository';
+import { IUserRepository } from '../repositories/interfaces/IUserRepository';
 import { CreateUserDto } from '../dto/CreateUser.dto';
 import { Service } from './Service';
 import { User } from '../entities/User';

@@ -1,4 +1,4 @@
-import { IRecordRepository } from '../repositories/interfaces/IRecord.repository';
+import { IRecordRepository } from '../repositories/interfaces/IRecordRepository';
 import { CreateRecordDto } from '../dto/CreateRecord.dto';
 import { Service } from './Service';
 import { Record } from '../entities/Record';

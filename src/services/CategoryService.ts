@@ -1,4 +1,4 @@
-import { ICategoryRepository } from '../repositories/interfaces/ICategory.repository';
+import { ICategoryRepository } from '../repositories/interfaces/ICategoryRepository';
 import { Service } from './Service';
 import { CreateCategoryDto } from '../dto/CreateCategory.dto';
 import { Category } from '../entities/Category';
