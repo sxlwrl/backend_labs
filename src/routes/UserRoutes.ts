@@ -1,14 +1,14 @@
 import {Router} from 'express';
 
-import {UserRepository} from "../repositories/User/UserRepository";
-import {UserController} from "../controllers/User.controller";
-import {UserService} from "../services/User.service";
+import {UserRepositoryImpl} from "../repositories/UserRepositoryImpl";
+import {UserController} from "../controllers/UserController";
+import {UserService} from "../services/UserService";
 
 import IRoutes from './routes-interfaces/IRoutes';
 
 class UserRoutes implements IRoutes {
     public router: Router = Router();
-    private userService: UserService = new UserService(new UserRepository())
+    private userService: UserService = new UserService(new UserRepositoryImpl())
     private userController: UserController = new UserController(this.userService);
 
     constructor() {
