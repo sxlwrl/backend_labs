@@ -1,0 +1,12 @@
+/node_modules
+/dist
+
+.gitignore
+
+README.md
+.eslintrc.js
+.prettierrc
+
+.env*
+!.env.project
+!.env.vault
