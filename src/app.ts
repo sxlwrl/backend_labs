@@ -1,24 +1,27 @@
-import express, {Request, Response, NextFunction} from 'express';
-import {json} from "body-parser";
+import express, { Request, Response, NextFunction } from 'express';
+import { json } from 'body-parser';
+import IRoutes from './routes/routes-interfaces/IRoutes';
 
-class App {
-    public app: express.Application;
+import dotenv from 'dotenv';
 
-    constructor(controllers: any[]) {
+dotenv.config();
+
+export default class {
+    private app: express.Application;
+    private PORT = process.env.PORT || 3000;
+
+    constructor(routes: IRoutes[]) {
         this.app = express();
 
         this.initMiddlewares();
-        this.initRoutes(controllers);
+        this.initRoutes(routes);
 
-        this.app.use((req: Request, res: Response, next: NextFunction) => {
-            res.status(404).json({code: 404, status: 'Not Found'});
-            next();
-        });
+        this.handle404();
     };
 
     public listen(): void {
-        this.app.listen(process.env.PORT, () => {
-            console.log(`Server listening on the port: ${process.env.PORT}`);
+        this.app.listen(this.PORT, () => {
+            console.log(`Server is listening on the port: ${this.PORT}`);
         });
     };
 
@@ -26,9 +29,14 @@ class App {
         this.app.use(json());
     };
 
-    private initRoutes(routes: any[]): void {
-        routes.forEach(routerItem => this.app.use('/', new routerItem().router));
+    private handle404() {
+        this.app.use((req: Request, res: Response, next: NextFunction) => {
+            res.status(404).send('Not found');
+            next();
+        });
+    };
+
+    private initRoutes(routes: IRoutes[]): void {
+        routes.forEach((routerItem) => this.app.use('/', routerItem.router));
     };
 }
-
-export default App;
