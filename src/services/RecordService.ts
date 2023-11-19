@@ -8,7 +8,7 @@ export class RecordService extends Service<Record, CreateRecordDto> {
         super(_recordRepository);
     }
 
-    public getRecordFiltered(user_id: string, category_id: string) {
+    public getRecordFiltered(user_id: string | undefined, category_id: string | undefined) {
         return this._recordRepository.getFiltered(user_id, category_id);
     }
 }

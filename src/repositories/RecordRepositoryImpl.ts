@@ -4,7 +4,7 @@ import { Record } from '../entities/Record';
 import { RepositoryImpl } from './RepositoryImpl';
 
 export class RecordRepositoryImpl extends RepositoryImpl<Record> implements IRecordRepository {
-    getFiltered(userId: string, categoryId: string) {
+    getFiltered(userId: string | undefined, categoryId: string | undefined) {
         if (!categoryId) {
             return this._data.filter(record => record.userId === userId);
         }
