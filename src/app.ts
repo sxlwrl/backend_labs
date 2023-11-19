@@ -8,7 +8,7 @@ dotenv.config();
 
 export default class {
     private app: express.Application;
-    private PORT = process.env.PORT || 3000;
+    private PORT = process.env.PORT || 4000;
 
     constructor(routes: IRoutes[]) {
         this.app = express();
