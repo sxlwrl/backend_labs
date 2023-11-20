@@ -37,3 +37,17 @@ npm run prod
 
 
 <br/>*P.S. If you need to change any command, you can easily do so in package.json scripts*<br/><br/>
+
+## How to dockerize a project
+
+<br>To create a Docker image you need to enter the following command:<br/><br/>
+
+```
+docker build . -t <image name>:<tag>
+```
+
+<br>To run a Docker image you need to enter the following command:<br/><br/>
+
+```
+docker run --rm -it -p <port>:<port> --init <image name>:<tag>
+```
