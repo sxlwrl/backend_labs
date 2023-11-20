@@ -23,9 +23,11 @@ npm run build
 ## How to run a project
 
 <br/>First of all, you need to decide in which mode you want to run the project.<br/><br/>
+If you want to run in ***developing mode*** then enter the following command:<br/><br/>
 
 ```
-npm run build
+npm run dev
 ```
+
 
 <br/>If you need to change the command, you can easily do so in package.json scripts<br/><br/>
