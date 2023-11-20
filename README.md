@@ -29,5 +29,11 @@ If you want to run in ***developing mode*** then enter the following command:<br
 npm run dev
 ```
 
+<br/>And if you want to run in ***production mode*** then enter the following command:<br/><br/>
 
-<br/>If you need to change the command, you can easily do so in package.json scripts<br/><br/>
+```
+npm run prod
+```
+
+
+<br/>*P.S. If you need to change any command, you can easily do so in package.json scripts*<br/><br/>
