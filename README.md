@@ -4,6 +4,12 @@
 
 #### Postman workspace: https://www.postman.com/maintenance-geoscientist-43307441/workspace/backend-labs <br/><br/>
 
+## Variant
+
+<br/>7 / 3 = 1 (Currencies)<br/><br/>
+
+
+
 ## How to install a project
 
 <br/>To install a project you have to run the installation command in CLI<br/><br/>
