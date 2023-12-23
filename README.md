@@ -6,7 +6,9 @@
 
 ## Variant
 
-<br/>7 / 3 = 1 (Currencies)<br/><br/>
+<br/>7 mod 3 = 1 (Currencies)<br/><br/>
+
+My number in the group list is 7
 
 
 
