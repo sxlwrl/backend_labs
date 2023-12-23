@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc -b",
-    "dev": "nodemon --exec ts-node src/server.ts",
+    "dev": "nodemon --exec ts-node src/application/server.ts",
     "prod": "npm run build && node dist/src/server.js",
     "lint": "eslint ./src",
-    "format": "eslint ./src --fix"
+    "format": "eslint ./src --fix",
+    "migration:create": "npx sequelize-cli migration:create --name",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migration:undo": "npx sequelize-cli db:migrate:undo",
+    "migration:undo:all": "npx sequelize-cli db:migrate:undo:all"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,8 @@
   "author": "Vadym Kazak",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/validator": "^13.11.7",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
     "eslint": "^8.51.0",
@@ -26,16 +32,20 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
     "nodemon": "^3.0.1",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "sequelize-cli": "^6.6.2"
   },
   "dependencies": {
     "@types/express": "^4.17.19",
-    "@types/node": "^20.8.6",
     "body-parser": "^1.20.2",
     "class-validator": "^0.14.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mysql2": "^3.6.5",
     "save": "^2.9.0",
+    "sequelize": "^6.35.1",
+    "sequelize-typescript": "^2.1.6",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }

@@ -1,6 +1,6 @@
 import {Router} from 'express';
 
-import {getHealthcheck} from "../controllers/HealthcheckController";
+import {getHealthcheck} from "../infrastructure/controllers/HealthcheckController";
 import IRoutes from './routes-interfaces/IRoutes';
 
 class HealthcheckRoutes implements IRoutes {

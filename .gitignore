@@ -4,3 +4,5 @@ dist/
 .env*
 !.env.project
 !.env.vault
+
+/config/config.json

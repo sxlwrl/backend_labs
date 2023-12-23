@@ -1,6 +1,7 @@
 export interface CreateRecordDto {
-    userId: string;
-    categoryId: string;
+    userId: number;
+    categoryId: number;
     date: Date;
     costs: number;
+    currency?: string;
 }

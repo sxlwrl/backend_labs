@@ -1,8 +1,8 @@
 import {Router} from 'express';
 
-import {UserRepositoryImpl} from "../repositories/UserRepositoryImpl";
-import {UserController} from "../controllers/UserController";
-import {UserService} from "../services/UserService";
+import {UserRepositoryImpl} from "../domain/repositories/UserRepositoryImpl";
+import {UserController} from "../infrastructure/controllers/UserController";
+import {UserService} from "../domain/services/UserService";
 
 import IRoutes from './routes-interfaces/IRoutes';
 
