@@ -1,12 +1,12 @@
-import App from './application/app.ts';
+import App from './application/app';
 
-import HealthcheckRoutes from './routes/HealthcheckRoutes.ts';
-import userRoutes from './routes/UserRoutes.ts';
-import categoryRoutes from "./routes/CategoryRoutes.ts";
-import recordRoutes from "./routes/RecordRoutes.ts";
+import HealthcheckRoutes from './routes/HealthcheckRoutes';
+import userRoutes from './routes/UserRoutes';
+import categoryRoutes from "./routes/CategoryRoutes";
+import recordRoutes from "./routes/RecordRoutes";
 
-import {sequelize} from "./infrastructure/database/sequelize.ts";
-import {CurrencyModel} from "./infrastructure/models/CurrencyModel.ts";
+import {sequelize} from "./infrastructure/database/sequelize";
+import {CurrencyModel} from "./infrastructure/models/CurrencyModel";
 
 const app = new App([new HealthcheckRoutes(), new userRoutes(), new categoryRoutes(), new recordRoutes()]);
 
