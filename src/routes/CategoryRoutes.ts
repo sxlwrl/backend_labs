@@ -1,8 +1,8 @@
 import {Router} from 'express';
 
-import {CategoryRepositoryImpl} from '../repositories/CategoryRepositoryImpl';
-import {CategoryController} from '../controllers/CategoryController';
-import {CategoryService} from '../services/CategoryService';
+import {CategoryRepositoryImpl} from '../domain/repositories/CategoryRepositoryImpl';
+import {CategoryController} from '../infrastructure/controllers/CategoryController';
+import {CategoryService} from '../domain/services/CategoryService';
 
 import IRoutes from './routes-interfaces/IRoutes';
 
