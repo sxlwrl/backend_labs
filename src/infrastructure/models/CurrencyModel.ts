@@ -24,7 +24,6 @@ CurrencyModel.init({
     currencyName: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: 'UAH'
     }
 }, {
     sequelize,
