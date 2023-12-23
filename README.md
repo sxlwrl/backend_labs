@@ -1,8 +1,8 @@
 # Backend labs
 
-#### Deployment link: https://backend-labs-eysc.onrender.com
+#### Deployment link: https://backend-labs-a790.onrender.com
 
-#### Postman workspace: https://www.postman.com/maintenance-geoscientist-43307441/workspace/backend-labs <br/><br/>
+#### Postman workspace: https://www.postman.com/sxlwrl/workspace/backend-labs<br/><br/>
 
 ## Variant
 
