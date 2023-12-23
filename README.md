@@ -43,6 +43,13 @@ npm run prod
 
 <br/>*P.S. If you need to change any command, you can easily do so in package.json scripts*<br/><br/>
 
+## How to migrate a DB
+
+```
+npm run migrate:create
+npm run migrate
+```
+
 ## How to dockerize a project
 
 <br>To create a Docker image you have to enter the following command:<br/><br/>
