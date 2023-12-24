@@ -1,12 +1,14 @@
 # Backend labs
 
-#### Deployment link: https://backend-labs-eysc.onrender.com
+#### Deployment link: https://backend-labs-a790.onrender.com
 
-#### Postman workspace: https://www.postman.com/maintenance-geoscientist-43307441/workspace/backend-labs <br/><br/>
+#### Postman workspace: https://www.postman.com/sxlwrl/workspace/backend-labs<br/><br/>
 
 ## Variant
 
-<br/>7 / 3 = 1 (Currencies)<br/><br/>
+<br/>7 mod 3 = 1 (Currencies)<br/><br/>
+
+My number in the group list is 7
 
 
 
