@@ -5,6 +5,7 @@ import {CurrencyModel} from "./CurrencyModel";
 interface UserAttributes {
     id: number;
     username: string;
+    password: string;
     defaultCurrency?: string;
 }
 
@@ -13,6 +14,7 @@ interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
 export class UserModel extends Model<UserAttributes, UserCreationAttributes> {
     declare id: number;
     declare username: string;
+    declare password: string;
     declare defaultCurrency?: string;
 }
 
@@ -27,6 +29,10 @@ UserModel.init({
         type: DataTypes.STRING,
         allowNull: false,
         unique: true
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     defaultCurrency: {
         type: DataTypes.STRING,
