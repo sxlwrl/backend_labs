@@ -1,5 +1,6 @@
-export interface CreateUserDto {
+export interface UserDto {
     username: string;
+    password: string;
     defaultCurrency?: string;
 }
 
