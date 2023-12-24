@@ -15,6 +15,10 @@ module.exports = {
         unique: true,
         type: Sequelize.STRING,
       },
+      password: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
       defaultCurrency: {
         allowNull: true,
         defaultValue: 'UAH',
