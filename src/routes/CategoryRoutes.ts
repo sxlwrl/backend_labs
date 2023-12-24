@@ -5,6 +5,7 @@ import {CategoryController} from '../infrastructure/controllers/CategoryControll
 import {CategoryService} from '../domain/services/CategoryService';
 
 import IRoutes from './routes-interfaces/IRoutes';
+import {authenticateToken} from "../middleware/authMiddleware";
 
 class UserRoutes implements IRoutes {
     public router: Router = Router();
@@ -16,9 +17,9 @@ class UserRoutes implements IRoutes {
     };
 
     initializeRoutes() {
-        this.router.get('/category/:category_id', this.categoryController.getCategoryById);
-        this.router.post('/category', this.categoryController.createCategory);
-        this.router.delete('/category/:category_id', this.categoryController.deleteCategory);
+        this.router.get('/category/:category_id', authenticateToken, this.categoryController.getCategoryById);
+        this.router.post('/category', authenticateToken, this.categoryController.createCategory);
+        this.router.delete('/category/:category_id', authenticateToken, this.categoryController.deleteCategory);
     };
 }
 
