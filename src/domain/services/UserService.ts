@@ -1,9 +1,21 @@
 import {IUserRepository} from '../repositories/interfaces/IUserRepository';
-import {CreateUserDto} from '../../dto/CreateUser.dto';
+import {UserDto} from '../../dto/User.dto';
 import {User} from '../entities/User';
 
 export class UserService {
     constructor(private readonly _repository: IUserRepository) {};
+
+    async register(data: UserDto) {
+        const {username, password, defaultCurrency = 'UAH' } = data;
+
+        const user = new User(username, password, defaultCurrency);
+
+        return await this._repository.register(user);
+    };
+
+    async auth(data: UserDto) {
+        return await this._repository.auth(data);
+    }
 
     async getById(id: number) {
         return this._repository.getById(id);
@@ -11,15 +23,7 @@ export class UserService {
 
     async delete(id: number) {
         return this._repository.delete(id);
-    }
-
-    async create(data: CreateUserDto) {
-        let {username, defaultCurrency = 'UAH' } = data;
-
-        const user = new User(username, defaultCurrency);
-
-        return this._repository.create(user);
-    }
+    };
 
     async getUsers() {
         return this._repository.getUsers();
