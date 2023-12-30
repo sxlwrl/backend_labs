@@ -72,7 +72,7 @@ export class UserController {
     };
 
     deleteUser: RequestHandler = async (req, res) => {
-        const userId = Number(req.params.user_id);
+        const userId = Number(req.body._userId);
 
         try {
             const user = await this._service.getById(userId);
