@@ -20,7 +20,7 @@ class UserRoutes implements IRoutes {
         this.router.post('/user/register', this.userController.register);
         this.router.post('/user/auth', this.userController.auth);
         this.router.get('/user/:user_id', authenticateToken, this.userController.getUserById);
-        this.router.delete('/user/:user_id', authenticateToken, this.userController.deleteUser);
+        this.router.delete('/user', authenticateToken, this.userController.deleteUser);
         this.router.get('/users', authenticateToken, this.userController.getUsers);
     };
 }
