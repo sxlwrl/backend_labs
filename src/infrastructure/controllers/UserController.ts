@@ -75,12 +75,6 @@ export class UserController {
         const userId = Number(req.body._userId);
 
         try {
-            const user = await this._service.getById(userId);
-
-            if (user.id !== req.body._userId) {
-                return res.status(403).json('You cannot delete this');
-            }
-
             await this._service.delete(userId);
             return res
                 .status(200)
