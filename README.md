@@ -1,16 +1,8 @@
-# Backend labs
+# Users-api
 
 #### Deployment link: https://backend-labs-a790.onrender.com
 
 #### Postman workspace: https://www.postman.com/sxlwrl/workspace/backend-labs<br/><br/>
-
-## Variant
-
-<br/>7 mod 3 = 1 (Currencies)<br/><br/>
-
-My number in the group list is 7
-
-
 
 ## How to install a project
 
